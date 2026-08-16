@@ -147,7 +147,7 @@ on("chat:message", function(msg) {
         }
     });
 
-    sendChat("duplicate_tokens.js", "/w gm 토큰 " + count + "개를 복사하였습니다.");
+    sendChat("duplicate_tokens.js", "/w gm 토큰 " + count + "개를 복사하였습니다.", null, {noarchive:true});
 });
 
 // 260216 duplicates_tokens.js 종료
