@@ -2,7 +2,7 @@
 on("chat:message", function(msg) {
     if (msg.type === "api" && msg.content === "!refillToken") {
         if (!msg.selected || msg.selected.length === 0) {
-            sendChat("System", "/w gm 선택된 토큰이 없습니다.", null, {noarchive: true});
+            sendChat("refill_tokens.js", "/w gm 선택된 토큰이 없습니다.", null, {noarchive: true});
             return;
         }
 
@@ -34,7 +34,7 @@ on("chat:message", function(msg) {
             count++;
         });
 
-        sendChat("System", "/w gm " + count + "개 토큰의 바 수치를 저널과 동기화했습니다.", null, {noarchive: true});
+        sendChat("refill_tokens.js", "/w gm " + count + "개 토큰의 바 수치를 저널과 동기화했습니다.", null, {noarchive: true});
     }
 });
 // 260216 refill_tokens.js 종료

@@ -20,7 +20,7 @@ on("chat:message", function(msg) {
     }
 
     if (tokenIds.length === 0) {
-        sendChat("API", "/w gm 선택된 토큰이 없습니다. 토큰 선택 후 매크로로 !copyToken --개수 를 실행하세요.");
+        sendChat("duplicate_tokens.js", "/w gm 선택된 토큰이 없습니다. 토큰 선택 후 매크로로 !copyToken --개수 를 실행하세요.");
         return;
     }
 
@@ -147,7 +147,7 @@ on("chat:message", function(msg) {
         }
     });
 
-    sendChat("API", "/w 토큰 " + count + "개 복사 완료.");
+    sendChat("duplicate_tokens.js", "/w 토큰 " + count + "개를 복사하였습니다.");
 });
 
 // 260216 duplicates_tokens.js 종료
